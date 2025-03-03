@@ -57,8 +57,8 @@ setTimeout("go()",3000);
                 Class.forName("com.mysql.jdbc.Driver");
         
                 String queryD1 = "SET @i=0;";
-                String queryD2 = "UPDATE comm SET id=(@i:=@i+1);";
-                String queryD3 = "ALTER TABLE comm AUTO_INCREMENT=0;";
+                String queryD2 = "UPDATE weakScan SET id=(@i:=@i+1);";
+                String queryD3 = "ALTER TABLE weakScan AUTO_INCREMENT=0;";
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/weakScan", "root", "123456");
                   Statement st=conn.createStatement();
                   String query = "insert into weakScan values(3,'國際事務處','','huangshu@yuntech.edu.tw','SA-office of research and development',0,'done','2025-01-10','2025-01-10')";
